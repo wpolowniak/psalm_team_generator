@@ -37,7 +37,15 @@ community_members = {
     'John & Sadie':2,
     'Mark & Dana':2,
     'Fr. Joe':1,
-    'Fr. John':1
+    'Fr. John':1,
+    'Rob & Julie':2,
+    'Gianina':1,
+    'Mark & Tara':2,
+    'Brendan':1,
+    'Simone & Laurie':2,
+    'Anthony':1,
+    'Ed & Mary':2,
+
 }
 
 def copy_to_clipboard(df, index=False):

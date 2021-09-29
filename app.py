@@ -14,5 +14,3 @@ if generate_button:
 
     if st.button('Copy Teams to Clipboard'):
         teams.to_clipboard(index=False)
-
-
