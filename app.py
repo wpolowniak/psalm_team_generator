@@ -12,5 +12,4 @@ if generate_button:
     teams = split_teams(community_members, num_teams)
     st.write(teams)
 
-    if st.button('Copy Teams to Clipboard'):
-        teams.to_clipboard(index=False)
+    st.button('Copy Teams to Clipboard', on_click=copy_to_clipboard(teams))
