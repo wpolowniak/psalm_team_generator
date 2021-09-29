@@ -1,6 +1,7 @@
 import numpy as np
 import random
 import pandas as pd
+from io import BytesIO
 
 def split_teams(community_dict, n_teams):
     members = list(community_dict.keys())
@@ -50,3 +51,12 @@ community_members = {
 
 def copy_to_clipboard(df, index=False):
     df.to_clipboard(index=index)
+
+# Function to convert csv to xlsx
+def to_excel(df):
+    output = BytesIO()
+    writer = pd.ExcelWriter(output, engine='xlsxwriter')
+    df.to_excel(writer, sheet_name='Sheet1',index=False)
+    writer.save()
+    processed_data = output.getvalue()
+    return processed_data
